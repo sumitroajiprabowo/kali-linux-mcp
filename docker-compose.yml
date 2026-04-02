@@ -1,0 +1,10 @@
+services:
+  kali-mcp:
+    build: .
+    container_name: kali-mcp-server
+    ports:
+      - "5050:5050"
+    restart: unless-stopped
+    # Uncomment below to persist data between restarts
+    # volumes:
+    #   - ./data:/data
