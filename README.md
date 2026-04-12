@@ -106,6 +106,8 @@ python3 /path/to/MCP-Kali-Server/client.py --server http://127.0.0.1:5050
 
 ## Available Tools
 
+### MCP Functions (dedicated)
+
 | Tool | MCP Function | Description |
 |------|-------------|-------------|
 | Nmap | `nmap_scan` | Port scanning and service detection |
@@ -120,6 +122,43 @@ python3 /path/to/MCP-Kali-Server/client.py --server http://127.0.0.1:5050
 | Enum4linux | `enum4linux_scan` | Windows/Samba enumeration |
 | Command | `execute_command` | Run any shell command on Kali |
 | Health | `server_health` | Check server and tool status |
+
+### Additional Tools (via `execute_command`)
+
+All tools below are pre-installed and can be used via the `execute_command` MCP function.
+
+**Recon & OSINT:**
+Subfinder, Amass, theHarvester, Recon-ng, WhatWeb, Wafw00f, Masscan, DNSRecon, DNSEnum, Fierce
+
+**Web Crawling & Discovery:**
+Katana, HTTPx, FFuf, Feroxbuster, Arjun
+
+**Vulnerability Scanning:**
+Nuclei, XSSer, Commix, SearchSploit (Exploit-DB)
+
+**Password Attacks:**
+Hashcat, Medusa, CeWL, Crunch
+
+**AD / SMB / Network:**
+NetExec, Impacket, Evil-WinRM, Responder, SMBClient, SMBMap, BloodHound, LDAPDomainDump, NBTScan, OneSixtyOne, SNMPWalk
+
+**Tunneling & Pivoting:**
+Chisel, Ligolo-ng, Proxychains4, Socat
+
+**Post-Exploitation:**
+Mimikatz, PowerShell Empire, Weevely
+
+**Reverse Engineering:**
+Binwalk, Radare2
+
+**Forensics:**
+Foremost, ExifTool, Steghide
+
+**Wireless:**
+Aircrack-ng (limited in Docker — no hardware access)
+
+**Networking:**
+Ncat, Tcpdump, Tshark, Traceroute, ARP-Scan
 
 ## Disclaimer
 

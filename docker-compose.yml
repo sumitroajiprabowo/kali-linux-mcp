@@ -3,7 +3,10 @@ services:
     build: .
     container_name: kali-mcp-server
     ports:
-      - "5050:5050"
+      - "127.0.0.1:5050:5050"
+    cap_add:
+      - NET_RAW
+      - NET_ADMIN
     restart: unless-stopped
     # Uncomment below to persist data between restarts
     # volumes:

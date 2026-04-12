@@ -9,7 +9,7 @@ case "${1:-start}" in
     docker compose -f "$DIR/docker-compose.yml" up -d --build
     echo "Waiting for server..."
     for i in {1..15}; do
-      if curl -s http://127.0.0.1:5050/ >/dev/null 2>&1; then
+      if curl -s http://127.0.0.1:5050/health >/dev/null 2>&1; then
         echo "Kali MCP Server ready at http://127.0.0.1:5050"
         exit 0
       fi
